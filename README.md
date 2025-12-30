@@ -2,13 +2,13 @@
 Entrega Taller solemne 2
 
 #Ejecuccion
-Backend
+#Backend
 uvicorn main:app --reload
 
-Frontend
+#Frontend
 npm install
 ng serve
 
-Docker
+#Docker
 docker build -t infratech .
 docker run -p 8000:8000 infratech
