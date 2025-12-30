@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <input formControlName="tipo" placeholder="Tipo">
+  <input formControlName="area" placeholder="Área">
+  <textarea formControlName="descripcion"></textarea>
+
+  <select formControlName="prioridad">
+    <option>Alta</option>
+    <option>Media</option>
+    <option>Baja</option>
+  </select>
+
+  <select formControlName="tecnico">
+    <option *ngFor="let t of tecnicos">{{t}}</option>
+  </select>
+
+  <button type="submit">Registrar</button>
+</form>

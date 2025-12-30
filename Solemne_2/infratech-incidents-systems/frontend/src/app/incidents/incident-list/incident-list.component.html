@@ -1,0 +1,13 @@
+<table>
+  <tr *ngFor="let i of incidents"
+      [style.background]="alerta48h(i) ? '#ffcccc' : ''">
+    <td>{{i.tipo}}</td>
+    <td>{{i.area}}</td>
+    <td>{{i.estado}}</td>
+    <td>{{i.prioridad}}</td>
+    <td>{{i.fechaCreacion | date}}</td>
+    <td>
+      <button (click)="resolver(i)">Resolver</button>
+    </td>
+  </tr>
+</table>
